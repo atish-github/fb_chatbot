@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 // Routes
 app.get('/', function(req, res){
-    res.send('Hi I am a chatbot')
+    res.send('Hi I am a chatbot 1.0')
 })
 
 // Route for facebook messenger
