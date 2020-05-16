@@ -16,10 +16,10 @@ app.use(bodyParser.json())
 
 // Routes
 app.get('/', function(req, res){
-    res.send('Chatbot root path')
+    res.send('Hi I am a chatbot')
 })
 
-// Route for facebook
+// Route for facebook messenger
 app.get('/webhook/', function(req,res){
     if(req.query['hub.verify_token'] === 'blondiebytes')
         res.send(req.query['hub.challenge'])
@@ -29,3 +29,4 @@ app.get('/webhook/', function(req,res){
 app.listen(app.get('port'), function() {
     console.log("running app")
 })
+
