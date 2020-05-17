@@ -21,6 +21,7 @@ app.get('/', function(req, res){
 
 // Route for facebook messenger
 app.get('/webhook/', function(req,res){
+    console.log(req.query)
     if(req.query['hub.verify_token'] === 'test-token')
         res.send(req.query['hub.challenge'])
     res.send('Wrong Token')
