@@ -21,7 +21,7 @@ app.get('/', function(req, res){
 
 // Route for facebook messenger
 app.get('/webhook/', function(req,res){
-    if(req.query['hub.verify_token'] === 'Testing Chat Bot')
+    if(req.query['hub.verify_token'] === 'test-token')
         res.send(req.query['hub.challenge'])
     res.send('Wrong Token')
 })
